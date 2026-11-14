@@ -4,5 +4,18 @@ Draft website for PRW Gas Services Ltd, a Gas Safe registered engineer in Bishop
 
 Live at: https://tduyywss.github.io/prw-gas-site/
 
-- All business details (phone, WhatsApp, email, Gas Safe number, areas covered) are in the `CONFIG` block at the bottom of `index.html`.
-- Still a draft. A `noindex` tag keeps it out of Google until the real Gas Safe number, Facebook link, areas and bio are in. Remove that line from `index.html` when it goes live for real.
+## Still needed from Paul
+All of these go in the `CONFIG` block at the bottom of `index.html`, apart from the bio.
+
+1. **Gas Safe number** (`gasSafe`).
+2. **Facebook page link** (`facebook`). The review buttons point to it.
+3. **Company number and registered office** (`companyNumber`, `registeredOffice`). A limited company's website must show these by law. They appear in the footer once filled in.
+4. **Areas covered** (`areas`). The current list is a guess at towns near Bishopton.
+5. **Bio**: the bracketed text in the "Meet Paul" section.
+6. **A daytime photo** of him in work gear, to replace `img/headshot.jpg`.
+
+## Notes
+- The quote and booking forms open WhatsApp with the message already written. Nothing is stored on the site.
+- `img/share.jpg` is the picture that shows when the link is shared on WhatsApp or Facebook.
+- If the site moves to its own domain, update the two `og:` web addresses near the top of `index.html`.
+- **Draft:** a `noindex` tag keeps the site out of Google. Remove that line from `index.html` when the details above are in.
