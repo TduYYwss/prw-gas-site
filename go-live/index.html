@@ -76,13 +76,13 @@
     <ol>
       <li>Log in at <a href="https://dash.cloudflare.com" target="_blank" rel="noopener">dash.cloudflare.com</a>.</li>
       <li>In the left menu, open <b class="ui">Workers &amp; Pages</b>. In the newer menu it sits under <b class="ui">Compute</b>.</li>
-      <li>Click <b class="ui">Create application</b>, then pick the <b class="ui">Pages</b> option.</li>
-      <li>Choose <b class="ui">Drag and drop your files</b> (it may say <b class="ui">Upload assets</b>). Don't pick the Git option.</li>
+      <li>Click <b class="ui">Create application</b>.</li>
+      <li>Choose the option to <b class="ui">upload</b> or <b class="ui">drag and drop</b> your files. Don't pick "Hello World", a template or the Git option.</li>
       <li>Project name: type <code>prwgas</code> and click <b class="ui">Create project</b>.</li>
       <li>Drag <code>prwgas-website.zip</code> from your Downloads folder into the box, or click to choose it.</li>
       <li>Click <b class="ui">Deploy site</b>.</li>
     </ol>
-    <p>After a few seconds Cloudflare gives you a test address like <code>prwgas.pages.dev</code>. Open it and check the site appears.</p>
+    <p>After a few seconds Cloudflare gives you a test address ending in <code>workers.dev</code> or <code>pages.dev</code>. Open it and check the site appears. Cloudflare may give the app a random name like <code>restless-tooth-f048</code>; that's fine.</p>
     <div class="note"><p>If Cloudflare says the name is taken, use something like <code>prwgas-site</code>. It's only the test address; customers will use prwgas.com.</p></div>
   </div>
 
@@ -90,11 +90,12 @@
     <span class="num">3</span>
     <h2>Connect prwgas.com</h2>
     <ol>
-      <li>Still in your new <code>prwgas</code> project, open the <b class="ui">Custom domains</b> tab.</li>
-      <li>Click <b class="ui">Set up a custom domain</b>, type <code>prwgas.com</code>, then <b class="ui">Continue</b> and <b class="ui">Activate domain</b>.</li>
-      <li>Do the same again for <code>www.prwgas.com</code>, so both work.</li>
+      <li>Open your new app from <b class="ui">Workers &amp; Pages</b>, then its <b class="ui">Domains</b> tab (on some screens: <b class="ui">Settings</b> → <b class="ui">Domains &amp; Routes</b>, or <b class="ui">Custom domains</b>).</li>
+      <li>Click <b class="ui">+ Add</b> → <b class="ui">Custom domain</b>, type <code>prwgas.com</code> and add it.</li>
+      <li>Do the same again for <code>www.prwgas.com</code>. Check <strong>both</strong> are in the list.</li>
     </ol>
-    <p>Because prwgas.com is in the same Cloudflare account, Cloudflare adds the settings for you. It usually takes a few minutes; the screen shows <strong>Active</strong> when it's done.</p>
+    <p>Because prwgas.com is in the same Cloudflare account, Cloudflare adds the settings for you. It usually takes a few minutes.</p>
+    <div class="note"><p>If your phone says <strong>"server can't be found"</strong> at first, it's your network catching up, not the site. Try www.prwgas.com, switch between Wi-Fi and mobile data, or wait an hour.</p></div>
   </div>
 
   <div class="step">
@@ -112,11 +113,11 @@
   <div class="step">
     <p>You'll be sent a new <code>prwgas-website.zip</code>. To put it live:</p>
     <ol>
-      <li><b class="ui">Workers &amp; Pages</b> → your <code>prwgas</code> project.</li>
-      <li>Click <b class="ui">Create deployment</b> (it may say <b class="ui">Upload new version</b>).</li>
-      <li>Drag in the new zip and click <b class="ui">Save and deploy</b>.</li>
+      <li><b class="ui">Workers &amp; Pages</b> → open the same app that prwgas.com is connected to (for example <code>restless-tooth-f048</code>). Don't create a new one.</li>
+      <li>Look for the option to upload a new version: it may be called <b class="ui">Upload</b>, <b class="ui">Deploy</b>, <b class="ui">Create deployment</b> or <b class="ui">Edit</b>, often on the <b class="ui">Deployments</b> tab.</li>
+      <li>Drag in the new zip and deploy it.</li>
     </ol>
-    <p>prwgas.com updates within a minute. Nothing else needs changing.</p>
+    <p>prwgas.com updates within a minute, and the domain settings stay as they are. If you can't find the upload option, send a screenshot of the app's page.</p>
   </div>
 
   <h2>Once it's live</h2>
