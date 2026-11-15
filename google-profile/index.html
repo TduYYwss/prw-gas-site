@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Google profile setup | PRW Gas Services</title>
+<link rel="icon" href="../img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --navy: #1d4b7c; --navy-deep: #0f2a47; --red: #d4142a; --sky: #2e8fd8; --paper: #f5f7fa; --card: #fff; --ink: #13212f; --line: #d8e0e9; --muted: #5a6877; --ok: #1c9e50; --warn-bg: #fff6e0; --warn-line: #e6b422; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 Inter, system-ui, sans-serif; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 16px; }
+  h1, h2, h3 { font-family: Archivo, Inter, sans-serif; line-height: 1.15; color: var(--navy-deep); margin: 0 0 .4em; }
+  h1 { font-size: clamp(1.7rem, 6vw, 2.3rem); font-weight: 900; color: #fff; }
+  h2 { font-size: 1.45rem; font-weight: 900; margin-top: 44px; }
+  h3 { font-size: 1.08rem; font-weight: 700; }
+  a { color: var(--navy); font-weight: 600; }
+  p { margin: 0 0 .8em; }
+  ul, ol { margin: 0 0 .8em; padding-left: 1.25em; }
+  li { margin-bottom: .35em; }
+  img { max-width: 100%; height: auto; display: block; }
+
+  .top { background: linear-gradient(135deg, var(--navy-deep), var(--navy)); color: #dbe6f2; padding: 32px 0 30px; }
+  .top .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; font: 700 .8rem/1.2 Archivo, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #9cc8ef; }
+  .top .brand span { width: 44px; height: 44px; border-radius: 50%; background: #fff; display: grid; place-items: center; flex: none; }
+  .top .brand img { width: 28px; }
+  .top p { margin: 0; max-width: 34em; }
+  .bar { height: 6px; background: linear-gradient(90deg, var(--red) 0 50%, var(--sky) 50% 100%); }
+  .progress { position: sticky; top: 0; z-index: 5; background: #fff; border-bottom: 1px solid var(--line); font-size: .9rem; font-weight: 600; color: var(--muted); }
+  .progress .wrap { display: flex; align-items: center; gap: 12px; height: 44px; }
+  .progress .track { flex: 1; height: 8px; background: var(--line); border-radius: 99px; overflow: hidden; }
+  .progress .fill { height: 100%; width: 0; background: var(--ok); transition: width .2s; }
+
+  .part { color: var(--red); font: 700 .78rem/1 Archivo, sans-serif; letter-spacing: .16em; text-transform: uppercase; display: block; margin: 44px 0 -36px; }
+  .step { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; margin: 14px 0; }
+  .step.done { border-color: var(--ok); background: #f4fbf6; }
+  .step > :last-child { margin-bottom: 0; }
+  .tick { display: flex; align-items: center; gap: 10px; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); font-weight: 600; font-size: .95rem; cursor: pointer; }
+  .tick input { width: 22px; height: 22px; accent-color: var(--ok); flex: none; }
+
+  .copybox { border: 2px dashed var(--line); border-radius: 10px; background: #fafcfe; padding: 14px; margin: 10px 0 14px; }
+  .copybox .label { font-size: .78rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; display: flex; justify-content: space-between; gap: 8px; }
+  .copybox .txt { white-space: pre-line; font-weight: 500; overflow-wrap: anywhere; }
+  .copybox button { margin-top: 12px; background: var(--navy); color: #fff; border: 0; border-radius: 8px; padding: 11px 18px; font: 700 .95rem/1 Archivo, sans-serif; cursor: pointer; }
+  .copybox button.ok { background: var(--ok); }
+  .note { background: var(--warn-bg); border-left: 4px solid var(--warn-line); border-radius: 6px; padding: 12px 14px; font-size: .95rem; margin: 12px 0; }
+  .note > :last-child { margin-bottom: 0; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 14px; }
+  .chips span { background: #eef3f8; border: 1px solid var(--line); border-radius: 99px; padding: 5px 12px; font-size: .92rem; font-weight: 600; }
+  .photos { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; margin: 12px 0; }
+  .photos figure { margin: 0; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: #fff; }
+  .photos img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+  .photos figcaption { padding: 8px 10px 10px; font-size: .85rem; }
+  .photos figcaption b { display: block; }
+  small, .small { font-size: .88rem; color: var(--muted); }
+  footer { margin: 48px 0 40px; font-size: .88rem; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="wrap">
+    <div class="brand"><span><img src="../img/logo.png" alt=""></span>PRW Gas Services Ltd</div>
+    <h1>Get PRW on Google Maps</h1>
+    <p>A Google Business Profile is what shows when someone nearby searches "gas engineer" or "boiler service". It's free. Setting it up takes about 30 minutes, then Google checks you're a real business, which can take a few days.</p>
+  </div>
+</div>
+<div class="bar"></div>
+<div class="progress"><div class="wrap"><span id="count">0 of 0 done</span><div class="track"><div class="fill" id="fill"></div></div></div></div>
+
+<main class="wrap">
+
+  <h2>Before you start</h2>
+  <div class="step" data-step="before">
+    <ul>
+      <li><strong>Use your own Google account,</strong> the Gmail you use for the business. You should be the owner. You can add me as a manager afterwards so I can help keep it up to date.</li>
+      <li><strong>Check you're not already on there.</strong> Search <em>PRW Gas Services Ltd</em> in Google Maps. If a profile already shows, tap <strong>Claim this business</strong> on it and don't create a second one.</li>
+      <li><strong>Have these to hand:</strong> the van, your Gas Safe ID card, and one document with the business name on it, such as an invoice or your insurance certificate.</li>
+    </ul>
+    <label class="tick"><input type="checkbox"> Done</label>
+  </div>
+
+  <span class="part">Part 1 · about 10 minutes</span>
+  <h2>Create the profile</h2>
+  <p>Go to <a href="https://business.google.com/create" target="_blank" rel="noopener">business.google.com/create</a> and sign in. Google asks the questions below, roughly in this order. If the wording on screen is slightly different, pick the closest match.</p>
+
+  <div class="step" data-step="name">
+    <h3>Business name</h3>
+    <div class="copybox"><div class="label">Paste this</div><div class="txt">PRW Gas Services Ltd</div><button type="button">Copy</button></div>
+    <div class="note"><p>Use the name exactly as it is on the van. Don't add words like "boiler repair Bishopton". Google treats that as breaking its rules and can take the profile down.</p></div>
+    <label class="tick"><input type="checkbox"> Done</label>
+  </div>
+
+  <div class="step" data-step="type">
+    <h3>Business type and location</h3>
+    <ul>
+      <li>Business type: choose <strong>Service business</strong>.</li>
+      <li>"Do you want to add a location customers can visit?": choose <strong>No</strong>. You work in customers' homes.</li>
+      <li>Google still asks for your address so it can check you're real. It stays hidden from the public.</li>
+    </ul>
+    <label class="tick"><input type="checkbox"> Done</label>
+  </div>
+
+  <div class="step" data-step="category">
+    <h3>Category</h3>
+    <p>Start typing and pick from Google's list.</p>
+    <div class="copybox"><div class="label">Main category</div><div class="txt">Gas engineer</div><button type="button">Copy</button></div>
+    <p>You can add more categories later, under <strong>Edit profile</strong>. These two fit:</p>
+    <div class="chips"><span>Heating contractor</span><span>Gas installation service</span></div>
+    <p class="small">"Heating contractor" sometimes shows as "Central heating service". If one isn't in the list, skip it. Only add "Plumber" if you want general plumbing jobs.</p>
+    <label class="tick"><input type="checkbox"> Done</label>
+  </div>
+
+  <div class="step" data-step="areas">
+    <h3>Areas you cover</h3>
+    <p>Type each town and pick it from the list. You can add up to 20.</p>
+    <div class="chips"><span>Bishopton</span><span>Erskine</span><span>Inchinnan</span><span>Houston</span><span>Bridge of Weir</span><span>Linwood</span><span>Renfrew</span><span>Paisley</span><span>Johnstone</span><span>Kilmacolm</span><span>Langbank</span></div>
+    <div class="note"><p>This list is my guess. Only add places you're happy to drive to, and tell me the final list so the website matches.</p></div>
+    <label class="tick"><input type="checkbox"> Done</label>
+  </div>
+
+  <div class="step" data-step="contact">
+    <h3>Phone and website</h3>
+    <div class="copybox"><div class="label">Phone</div><div class="txt">07947 890992</div><button type="button">Copy</button></div>
+    <div class="copybox"><div class="label">Website</div><div class="txt">https://tduyywss.github.io/prw-gas-site/</div><button type="button">Copy</button></div>
+    <div class="note"><p>Leave the website box empty until your Gas Safe number is showing on the site. Customers will tap through from Google, and right now they'd see a placeholder. You can add the website later under <strong>Edit profile</strong>.</p></div>
+    <label class="tick"><input type="checkbox"> Done</label>
+  </div>
+
+  <span class="part">Part 2 · about 10 minutes</span>
+  <h2>Prove it's your business</h2>
+  <div class="step" data-step="verify">
+    <p>Google picks how it checks you. For a business with no shop it's usually a <strong>short video you film on your phone</strong>. Sometimes it's a code by text, email or post instead. Follow whatever Google shows on screen.</p>
+    <h3>If it asks for a video, film this in one go</h3>
+    <ol>
+      <li><strong>Where you are:</strong> start outside and show your street sign or the entrance to your street.</li>
+      <li><strong>The van:</strong> walk to it and show the PRW signs on the side and back, including the phone number.</li>
+      <li><strong>That it's yours:</strong> unlock the van, open it and show your tools.</li>
+      <li><strong>Paperwork:</strong> show your Gas Safe ID card and one document with the business name on it.</li>
+    </ol>
+    <ul>
+      <li>Keep recording the whole time. Don't stop, cut or edit.</li>
+      <li>Keep customers' details and other people's faces out of shot.</li>
+      <li>A minute or two is plenty.</li>
+    </ul>
+    <p class="small">Google's own checklist is here: <a href="https://support.google.com/business/answer/14271705" target="_blank" rel="noopener">verify your business with a video</a>. If it differs from the list above, follow Google's.</p>
+    <p>Google then reviews it. That usually takes a few days, and you get an email when you're verified.</p>
+    <label class="tick"><input type="checkbox"> Done</label>
+  </div>
+
+  <span class="part">Part 3 · about 15 minutes, once you're verified</span>
+  <h2>Fill the profile in</h2>
+  <p>Search <em>my business</em> on Google while signed in, then tap <strong>Edit profile</strong>. Change anything below that isn't true about how you work.</p>
+
+  <div class="step" data-step="description">
+    <h3>Description</h3>
+    <div class="copybox"><div class="label"><span>Paste this</span><span id="descCount"></span></div><div class="txt" id="desc">PRW Gas Services Ltd is a Gas Safe registered gas engineer based in Bishopton, covering Erskine, Houston, Paisley, Renfrew and the surrounding Renfrewshire area. I'm Paul, and when you get in touch you deal with me from the first message to the final safety check.
+
+I service and repair gas boilers, carry out annual gas safety inspections for homeowners and landlords, service and repair unvented hot water cylinders, repair and replace radiators, and trace and repair gas leaks.
+
+You get a plain-English explanation of any fault, with photos, and a price agreed before work starts.</div><button type="button">Copy</button></div>
+    <p class="small">Google allows 750 characters and doesn't allow web links or offers in this box.</p>
+    <label class="tick"><input type="checkbox"> Done</label>
+  </div>
+
+  <div class="step" data-step="hours">
+    <h3>Opening hours</h3>
+    <p>Put your real hours. Only list times when you'll answer the phone or reply to messages. Don't put 24 hours unless you take calls through the night.</p>
+    <label class="tick"><input type="checkbox"> Done</label>
+  </div>
+
+  <div class="step" data-step="services">
+    <h3>Services</h3>
+    <p>Under <strong>Services</strong>, tick any of Google's suggestions that match, then add the rest with <strong>Add custom service</strong>. Each one has a name and a short description. Prices are optional, so leave them blank for now.</p>
+
+    <div class="copybox"><div class="label">Boiler service</div><div class="txt">A yearly service for your gas boiler: safety checks, cleaning where needed and a check that it's burning correctly. It keeps the boiler safe and efficient, and most manufacturers need one every year to keep the warranty valid.</div><button type="button">Copy</button></div>
+    <div class="copybox"><div class="label">Boiler repair</div><div class="txt">Fault finding and repairs for gas boilers: no heating or hot water, leaks, low pressure or fault codes. You get the diagnosis and the price before any repair starts.</div><button type="button">Copy</button></div>
+    <div class="copybox"><div class="label">Gas safety inspection</div><div class="txt">A yearly safety check of the gas appliances, pipework and flues in your home, with a written record of the results.</div><button type="button">Copy</button></div>
+    <div class="copybox"><div class="label">Landlord gas safety certificate</div><div class="txt">The annual gas safety record that landlords need by law for rented homes, often called a CP12. Covers the gas appliances, pipework and flues, with a copy for you and your tenants.</div><button type="button">Copy</button></div>
+    <div class="copybox"><div class="label">Unvented cylinder service and repair</div><div class="txt">Servicing and repairs for unvented hot water cylinders, including the yearly check of the safety valves and expansion vessel.</div><button type="button">Copy</button></div>
+    <div class="copybox"><div class="label">Gas leak detection and repair</div><div class="txt">Tracing and repairing leaks on gas pipework and appliances. If you smell gas, call the National Gas Emergency line on 0800 111 999 first. I repair the fault once it has been made safe.</div><button type="button">Copy</button></div>
+    <div class="copybox"><div class="label">Radiator repair and replacement</div><div class="txt">Repairs and replacements for radiators and valves: cold spots, leaks, sticking valves and upgrades.</div><button type="button">Copy</button></div>
+    <label class="tick"><input type="checkbox"> Done</label>
+  </div>
+
+  <div class="step" data-step="photos">
+    <h3>Photos</h3>
+    <p>Press and hold each photo, then choose <strong>Save to Photos</strong>. Upload them under <strong>Photos</strong> on your profile.</p>
+    <div class="photos">
+      <figure><a href="logo-square.png" download="prw-logo.png"><img src="logo-square.png" alt="PRW logo on a white square"></a><figcaption><b>Logo</b>Set this as the logo.</figcaption></figure>
+      <figure><a href="cover.jpg" download="prw-cover.jpg"><img src="cover.jpg" alt="The PRW van, showing the signs on the side"></a><figcaption><b>Cover photo</b>Set this as the cover.</figcaption></figure>
+      <figure><a href="../img/van.jpg" download="prw-van.jpg"><img src="../img/van.jpg" alt="The PRW van from behind"></a><figcaption><b>Van</b>Add as a photo.</figcaption></figure>
+      <figure><a href="../img/on-the-job.jpg" download="prw-at-work.jpg"><img src="../img/on-the-job.jpg" alt="Paul at work under a sink"></a><figcaption><b>At work</b>Add as a photo.</figcaption></figure>
+      <figure><a href="../img/boiler-service.jpg" download="prw-boiler-service.jpg"><img src="../img/boiler-service.jpg" alt="A boiler stripped down during a service"></a><figcaption><b>Boiler service</b>Add as a photo.</figcaption></figure>
+    </div>
+    <ul>
+      <li>The logo here is cut from your flyer, so it's a bit soft. If you have the original file from whoever designed it, use that.</li>
+      <li>Add a new job photo every couple of weeks. Profiles with fresh photos get more calls.</li>
+      <li>Keep customers, their belongings and their house numbers out of shot.</li>
+    </ul>
+    <label class="tick"><input type="checkbox"> Done</label>
+  </div>
+
+  <div class="step" data-step="whatsapp">
+    <h3>WhatsApp and booking links</h3>
+    <p>Under <strong>Edit profile</strong>, then <strong>Contact</strong>, look for <strong>Chat</strong>. If it's there, choose WhatsApp and paste this. Not every profile has it yet, so skip it if you don't see it.</p>
+    <div class="copybox"><div class="label">WhatsApp link</div><div class="txt">https://wa.me/447947890992</div><button type="button">Copy</button></div>
+    <p>If you see <strong>Booking</strong> or <strong>Appointment link</strong>, paste this once the website is ready:</p>
+    <div class="copybox"><div class="label">Booking link</div><div class="txt">https://tduyywss.github.io/prw-gas-site/#quote</div><button type="button">Copy</button></div>
+    <label class="tick"><input type="checkbox"> Done</label>
+  </div>
+
+  <div class="step" data-step="post">
+    <h3>Your first post</h3>
+    <p>Tap <strong>Add update</strong>. Paste the words below, add the boiler service photo, and choose the <strong>Call now</strong> button.</p>
+    <div class="copybox"><div class="label">Paste this</div><div class="txt">Is your boiler ready for winter? If it hasn't been serviced in the last 12 months, now is a good time. A service picks up small faults before they turn into a breakdown on the coldest day of the year, and most boiler warranties need one every year.
+
+I'm Paul, a Gas Safe registered engineer based in Bishopton. Tap the button to call and book.</div><button type="button">Copy</button></div>
+    <p class="small">Don't type your phone number into the post itself. Google can reject posts with phone numbers in them, and the button does that job.</p>
+    <label class="tick"><input type="checkbox"> Done</label>
+  </div>
+
+  <span class="part">Part 4 · ongoing</span>
+  <h2>Reviews</h2>
+  <div class="step" data-step="reviews">
+    <p>Google reviews are what move you up the map. Your Facebook reviews don't show on Google, so this starts from zero.</p>
+    <ol>
+      <li>On your profile, tap <strong>Ask for reviews</strong> (it may say <strong>Get more reviews</strong>).</li>
+      <li>Copy the link it gives you and send it to me.</li>
+      <li>I'll turn it into a card with a QR code to leave after each job, and a WhatsApp message you can send with one tap.</li>
+    </ol>
+    <h3>The rules</h3>
+    <ul>
+      <li>Only ask people you've done work for. Friends and family who haven't been customers shouldn't leave one.</li>
+      <li>Never offer money off in return for a review. Google bans it and removes reviews when it spots it.</li>
+      <li>Reply to every review, even with one line.</li>
+    </ul>
+    <label class="tick"><input type="checkbox"> Done</label>
+  </div>
+
+  <div class="step" data-step="manager">
+    <h3>Add me as a manager (optional)</h3>
+    <p>On your profile, tap the three dots, then <strong>Business Profile settings</strong>, then <strong>People and access</strong>, then <strong>Add</strong>. Enter my email address, which I'll send you, and choose <strong>Manager</strong>. You stay the owner.</p>
+    <label class="tick"><input type="checkbox"> Done</label>
+  </div>
+
+  <h2>Three things not to do</h2>
+  <div class="step">
+    <ol>
+      <li><strong>Don't add extra words to the business name.</strong></li>
+      <li><strong>Don't use an address you don't work from,</strong> such as a virtual office or someone else's house.</li>
+      <li><strong>Don't change the name, category or address in the first few weeks</strong> unless you have to. Google can ask you to verify all over again.</li>
+    </ol>
+  </div>
+
+  <footer>This page isn't linked from the PRW website and is hidden from search engines. Only people with the link will find it.</footer>
+</main>
+
+<script>
+// Copy buttons
+const clean = el => el.textContent.split("\n").map(s => s.trim()).join("\n").trim();
+document.querySelectorAll(".copybox button").forEach(btn => btn.addEventListener("click", async () => {
+  const text = clean(btn.parentElement.querySelector(".txt"));
+  try { await navigator.clipboard.writeText(text); }
+  catch (e) {
+    const ta = document.createElement("textarea"); ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select(); try { document.execCommand("copy"); } catch (e2) {} ta.remove();
+  }
+  btn.textContent = "Copied"; btn.classList.add("ok");
+  setTimeout(() => { btn.textContent = "Copy"; btn.classList.remove("ok"); }, 1600);
+}));
+document.getElementById("descCount").textContent = clean(document.getElementById("desc")).length + " / 750";
+
+// "Done" ticks, remembered on this phone
+const KEY = "prw-google-profile-done";
+let done = [];
+try { done = JSON.parse(localStorage.getItem(KEY) || "[]"); } catch (e) {}
+const steps = [...document.querySelectorAll(".step[data-step]")];
+function render() {
+  steps.forEach(s => { const on = done.includes(s.dataset.step); s.classList.toggle("done", on); s.querySelector(".tick input").checked = on; });
+  const n = steps.filter(s => done.includes(s.dataset.step)).length;
+  document.getElementById("count").textContent = `${n} of ${steps.length} done`;
+  document.getElementById("fill").style.width = (100 * n / steps.length) + "%";
+}
+steps.forEach(s => s.querySelector(".tick input").addEventListener("change", e => {
+  done = done.filter(k => k !== s.dataset.step);
+  if (e.target.checked) done.push(s.dataset.step);
+  try { localStorage.setItem(KEY, JSON.stringify(done)); } catch (e2) {}
+  render();
+}));
+render();
+</script>
+</body>
+</html>
