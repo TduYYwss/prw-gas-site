@@ -5,6 +5,7 @@ Draft website for PRW Gas Services Ltd, a Gas Safe registered engineer in Bishop
 Live at: https://tduyywss.github.io/prw-gas-site/
 
 ## Still needed from Paul
+(Gas Safe number, company number and Facebook link are now in.)
 All of these go in the `CONFIG` block at the bottom of `index.html`, apart from the bio.
 
 1. **Gas Safe number** (`gasSafe`).

@@ -216,6 +216,13 @@
   }
 
   [id] { scroll-margin-top: 90px; }
+  .work { background: var(--paper); }
+  .lead-dark { color: var(--muted); max-width: 40em; margin: 0 0 24px; }
+  .gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 360px)); gap: 16px; }
+  .gallery figure { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .gallery img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+  .gallery figcaption { padding: 12px 14px; font-weight: 600; font-size: .95rem; color: var(--navy-deep); }
+  @media (max-width: 760px) { .gallery { grid-template-columns: 1fr 1fr; } }
   :focus-visible { outline: 3px solid var(--sky); outline-offset: 2px; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
 </style>
@@ -248,7 +255,7 @@
   <section class="hero">
     <div class="wrap">
       <div>
-        <span class="eyebrow">Gas Safe registered · Bishopton &amp; Renfrewshire</span>
+        <span class="eyebrow">Gas Safe registered · Dargavel, Bishopton &amp; Renfrewshire</span>
         <h1>Safe, trusted,<br><em>local</em> gas engineer.</h1>
         <p class="lead">I'm Paul, a Gas Safe registered engineer based in Bishopton. I service and repair boilers, carry out gas safety inspections, and look after unvented cylinders and radiators. You deal with me from your first message to the final safety check.</p>
         <div class="ctas">
@@ -320,7 +327,7 @@
       <div>
         <span class="eyebrow">Meet Paul</span>
         <h2>A local engineer, not a call centre</h2>
-        <p data-cfg="bio">[Paul's bio goes here: two or three sentences in his own words. Where he trained, how long he's been on the tools, why he set up PRW.]</p>
+        <p>I'm Paul Wilkin, a Gas Safe registered gas engineer (no. <span data-cfg="gasSafe"></span>) based in Dargavel, Bishopton. PRW Gas Services Ltd is my own company.</p>
         <p>When you message PRW, you're talking to the engineer who'll do the job. I'll tell you straight what's wrong and what it costs, turn up when I say I will, and leave the place tidy.</p>
         <ul class="ticks">
           <li>Gas Safe registered. Check me on the public register.</li>
@@ -334,6 +341,19 @@
         <img class="inset" src="img/boiler-service.jpg" alt="A boiler with its casing removed during a service" width="600" height="797" loading="lazy">
         <figcaption>Every service is a proper strip-down, not just a look and a sticker.</figcaption>
       </figure>
+    </div>
+  </section>
+
+  <section class="work">
+    <div class="wrap">
+      <span class="eyebrow">Recent work</span>
+      <h2>Faults caught before they become a problem</h2>
+      <p class="lead-dark">A proper service means taking the boiler apart. That's how faults get picked up early, before they turn unsafe or into a bigger repair bill.</p>
+      <div class="gallery">
+        <figure><img src="img/job-service.jpg" alt="A boiler with its case off and the heat exchanger opened up during a service" width="900" height="1195" loading="lazy"><figcaption>Opened right up for a full service</figcaption></figure>
+        <figure><img src="img/job-fault.jpg" alt="A damaged part inside a boiler, found during a routine service" width="900" height="1200" loading="lazy"><figcaption>Fault found during a routine service</figcaption></figure>
+      </div>
+      <a href="#" class="btn btn-red js-service-book" style="margin-top:26px">Book a service</a>
     </div>
   </section>
 
@@ -428,7 +448,7 @@
       <div id="faq">
         <span class="eyebrow">Questions</span>
         <h2>FAQ</h2>
-        <details><summary>How do I check you're Gas Safe registered?</summary><p>Search registration number <strong data-cfg="gasSafe"></strong> on the Gas Safe Register website, or ask to see my ID card when I arrive. Every legitimate gas engineer carries one.</p></details>
+        <details><summary>How do I check you're Gas Safe registered?</summary><p>Search registration number <strong data-cfg="gasSafe"></strong> on the <a href="https://www.gassaferegister.co.uk/" target="_blank" rel="noopener">Gas Safe Register website</a>, or ask to see my ID card when I arrive. Every legitimate gas engineer carries one.</p></details>
         <details><summary>Do you charge for quotes?</summary><p>Quotes are free. For repairs I'll tell you any call-out charge before I come out, so there are no surprises.</p></details>
         <details><summary>How often should my boiler be serviced?</summary><p>Once a year. Most manufacturer warranties require it, and it picks up small faults before they become unsafe or expensive.</p></details>
         <details><summary>I'm a landlord. How often do I need a gas safety check?</summary><p>Every 12 months by law, and your tenants need a copy of the record. I can remind you when the next one is due.</p></details>
@@ -476,20 +496,20 @@
    EDIT HERE: all of the business details live in this block.
    ============================================================ */
 const CONFIG = {
-  gasSafe:      "[000000]",                 // TODO: his Gas Safe registration number
+  gasSafe:      "961470",
   whatsapp:     "447947890992",             // international format, no + or spaces
   phoneDisplay: "07947 890992",
   email:        "wilkin434@gmail.com",
-  facebook:     "https://www.facebook.com/", // TODO: paste the PRW Gas Services Ltd page link
+  facebook:     "https://www.facebook.com/profile.php?id=61571802625465",
   // A limited company's website must show these by law. They appear in the footer once filled in.
-  companyNumber:    "",                     // TODO: Companies House number, e.g. "SC123456"
+  companyNumber:    "SC833250",
   registeredIn:     "Scotland",
   registeredOffice: "",                     // TODO: registered office address
   vatNumber:        "",                     // only if VAT registered
   reviewScore:  "100%",                     // from Facebook: update as reviews come in
   reviewCount:  "19",
   // TODO: confirm with him. These are towns near Bishopton, guessed, not his list.
-  areas: ["Bishopton", "Erskine", "Inchinnan", "Houston", "Bridge of Weir", "Linwood", "Renfrew", "Paisley", "Johnstone", "Kilmacolm", "Langbank"]
+  areas: ["Dargavel", "Bishopton", "Erskine", "Inchinnan", "Houston", "Bridge of Weir", "Linwood", "Renfrew", "Paisley", "Johnstone", "Kilmacolm", "Langbank"]
 };
 
 document.querySelectorAll("[data-cfg]").forEach(el => {
@@ -520,6 +540,10 @@ function setMode(m) {
   form.classList.toggle("booking", m === "booking");
   document.querySelectorAll(".tabs button").forEach(b => b.setAttribute("aria-selected", b.dataset.mode === m));
 }
+document.querySelectorAll(".js-service-book").forEach(a => a.addEventListener("click", e => {
+  e.preventDefault(); form.elements.service.value = "Boiler service"; setMode("booking");
+  document.getElementById("quote").scrollIntoView(); form.elements.name.focus({ preventScroll: true });
+}));
 document.querySelectorAll("[data-service]").forEach(btn => btn.addEventListener("click", () => {
   form.elements.service.value = btn.dataset.service;
   setMode(/service|inspection/i.test(btn.dataset.service) ? "booking" : "quote");
