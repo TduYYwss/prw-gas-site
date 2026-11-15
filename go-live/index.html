@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Put the website on prwgas.com | PRW Gas Services</title>
+<link rel="icon" href="../img/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --navy: #1d4b7c; --navy-deep: #0f2a47; --red: #d4142a; --sky: #2e8fd8; --paper: #f5f7fa; --card: #fff; --ink: #13212f; --line: #d8e0e9; --muted: #5a6877; --ok: #1c9e50; --warn-bg: #fff6e0; --warn-line: #e6b422; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 Inter, system-ui, sans-serif; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 16px; }
+  h1, h2, h3 { font-family: Archivo, Inter, sans-serif; line-height: 1.15; color: var(--navy-deep); margin: 0 0 .4em; }
+  h1 { font-size: clamp(1.7rem, 6vw, 2.3rem); font-weight: 900; color: #fff; }
+  h2 { font-size: 1.4rem; font-weight: 900; margin-top: 40px; }
+  h3 { font-size: 1.05rem; font-weight: 700; margin-top: 1em; }
+  a { color: var(--navy); font-weight: 600; }
+  p { margin: 0 0 .8em; }
+  ol, ul { margin: 0 0 .8em; padding-left: 1.3em; }
+  li { margin-bottom: .45em; }
+  b.ui { background: #eef3f8; border: 1px solid var(--line); border-radius: 6px; padding: 0 6px; font-weight: 600; white-space: nowrap; }
+  code { background: #eef3f8; border-radius: 6px; padding: 1px 6px; font-size: .95em; }
+  .top { background: linear-gradient(135deg, var(--navy-deep), var(--navy)); color: #dbe6f2; padding: 32px 0 30px; }
+  .top .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; font: 700 .8rem/1.2 Archivo, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #9cc8ef; }
+  .top .brand span { width: 44px; height: 44px; border-radius: 50%; background: #fff; display: grid; place-items: center; flex: none; }
+  .top .brand img { width: 28px; }
+  .top p { margin: 0; max-width: 34em; }
+  .bar { height: 6px; background: linear-gradient(90deg, var(--red) 0 50%, var(--sky) 50% 100%); }
+  .step { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; margin: 14px 0; position: relative; }
+  .step > :last-child { margin-bottom: 0; }
+  .num { position: absolute; top: -14px; left: 16px; width: 30px; height: 30px; border-radius: 50%; background: var(--red); color: #fff; display: grid; place-items: center; font: 900 .95rem Archivo, sans-serif; }
+  .step h2 { margin-top: 6px; }
+  .note { background: var(--warn-bg); border-left: 4px solid var(--warn-line); border-radius: 6px; padding: 12px 14px; font-size: .95rem; margin: 12px 0; }
+  .note > :last-child { margin-bottom: 0; }
+  .btn { display: inline-flex; align-items: center; gap: 10px; background: var(--ok); color: #fff; text-decoration: none; border-radius: 10px; padding: 15px 22px; font: 700 1.05rem/1 Archivo, sans-serif; margin: 6px 0 10px; }
+  .btn svg { width: 22px; height: 22px; }
+  small, .small { font-size: .9rem; color: var(--muted); }
+  footer { margin: 44px 0 40px; font-size: .88rem; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="wrap">
+    <div class="brand"><span><img src="../img/logo.svg" alt=""></span>PRW Gas Services Ltd</div>
+    <h1>Put your website on prwgas.com</h1>
+    <p>About 15 minutes, on your laptop. Everything happens in the Cloudflare account where you bought prwgas.com, and it's free.</p>
+  </div>
+</div>
+<div class="bar"></div>
+
+<main class="wrap">
+
+  <div class="note" style="margin-top:28px">
+    <p><strong>Before you start:</strong> if you added any records earlier that point prwgas.com at GitHub (four <code>A</code> records starting <code>185.199.</code>, or a <code>www</code> record pointing to <code>tduyywss.github.io</code>), delete them first. In Cloudflare go to <b class="ui">Domains</b> → <b class="ui">prwgas.com</b> → <b class="ui">DNS</b> → <b class="ui">Records</b>. If you never added them, skip this.</p>
+  </div>
+
+  <div class="step">
+    <span class="num">1</span>
+    <h2>Download the website</h2>
+    <p>One file has the whole site in it. Save it to your laptop and leave it zipped.</p>
+    <a class="btn" href="../download/prwgas-website.zip" download>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16"/></svg>
+      Download prwgas-website.zip
+    </a>
+    <p class="small">It's about 1 MB. It ends up in your Downloads folder.</p>
+  </div>
+
+  <div class="step">
+    <span class="num">2</span>
+    <h2>Upload it to Cloudflare</h2>
+    <ol>
+      <li>Log in at <a href="https://dash.cloudflare.com" target="_blank" rel="noopener">dash.cloudflare.com</a>.</li>
+      <li>In the left menu, open <b class="ui">Workers &amp; Pages</b>. In the newer menu it sits under <b class="ui">Compute</b>.</li>
+      <li>Click <b class="ui">Create application</b>, then pick the <b class="ui">Pages</b> option.</li>
+      <li>Choose <b class="ui">Drag and drop your files</b> (it may say <b class="ui">Upload assets</b>). Don't pick the Git option.</li>
+      <li>Project name: type <code>prwgas</code> and click <b class="ui">Create project</b>.</li>
+      <li>Drag <code>prwgas-website.zip</code> from your Downloads folder into the box, or click to choose it.</li>
+      <li>Click <b class="ui">Deploy site</b>.</li>
+    </ol>
+    <p>After a few seconds Cloudflare gives you a test address like <code>prwgas.pages.dev</code>. Open it and check the site appears.</p>
+    <div class="note"><p>If Cloudflare says the name is taken, use something like <code>prwgas-site</code>. It's only the test address; customers will use prwgas.com.</p></div>
+  </div>
+
+  <div class="step">
+    <span class="num">3</span>
+    <h2>Connect prwgas.com</h2>
+    <ol>
+      <li>Still in your new <code>prwgas</code> project, open the <b class="ui">Custom domains</b> tab.</li>
+      <li>Click <b class="ui">Set up a custom domain</b>, type <code>prwgas.com</code>, then <b class="ui">Continue</b> and <b class="ui">Activate domain</b>.</li>
+      <li>Do the same again for <code>www.prwgas.com</code>, so both work.</li>
+    </ol>
+    <p>Because prwgas.com is in the same Cloudflare account, Cloudflare adds the settings for you. It usually takes a few minutes; the screen shows <strong>Active</strong> when it's done.</p>
+  </div>
+
+  <div class="step">
+    <span class="num">4</span>
+    <h2>Check it on your phone</h2>
+    <ul>
+      <li>Open <strong>https://prwgas.com</strong>. You should see the padlock in the address bar.</li>
+      <li>Tap <b class="ui">Call Paul</b> and <b class="ui">WhatsApp</b> to check they open your number.</li>
+      <li>Try the quote form, but don't press send in WhatsApp, or you'll message yourself.</li>
+    </ul>
+    <p>Then send the link to whoever made the site, so they can check it too.</p>
+  </div>
+
+  <h2>When the website changes</h2>
+  <div class="step">
+    <p>You'll be sent a new <code>prwgas-website.zip</code>. To put it live:</p>
+    <ol>
+      <li><b class="ui">Workers &amp; Pages</b> → your <code>prwgas</code> project.</li>
+      <li>Click <b class="ui">Create deployment</b> (it may say <b class="ui">Upload new version</b>).</li>
+      <li>Drag in the new zip and click <b class="ui">Save and deploy</b>.</li>
+    </ol>
+    <p>prwgas.com updates within a minute. Nothing else needs changing.</p>
+  </div>
+
+  <h2>Once it's live</h2>
+  <div class="step">
+    <ul>
+      <li><strong>Google profile:</strong> use <code>https://prwgas.com</code> as your website.</li>
+      <li><strong>Facebook:</strong> add <code>https://prwgas.com</code> to your page's details.</li>
+      <li><strong>Optional email address:</strong> in Cloudflare, <b class="ui">Email</b> → <b class="ui">Email Routing</b> can forward something like <code>info@prwgas.com</code> to your Gmail for free.</li>
+    </ul>
+  </div>
+
+  <footer>Cloudflare sometimes renames its buttons. If something looks different, pick the closest match, or send a screenshot.</footer>
+</main>
+</body>
+</html>

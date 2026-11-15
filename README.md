@@ -20,3 +20,8 @@ All of these go in the `CONFIG` block at the bottom of `index.html`, apart from 
 - `img/share.jpg` is the picture that shows when the link is shared on WhatsApp or Facebook.
 - If the site moves to its own domain, update the two `og:` web addresses near the top of `index.html`.
 - **Draft:** a `noindex` tag keeps the site out of Google. Remove that line from `index.html` when the details above are in.
+
+## Going live on prwgas.com
+- `python3 tools/make_release.py` builds `download/prwgas-website.zip`: the site with the draft "hide from Google" tag removed and the link previews pointed at prwgas.com. **Re-run it after every change** and send Paul the new zip.
+- Paul uploads that zip to Cloudflare Pages, following the guide at `go-live/` (https://tduyywss.github.io/prw-gas-site/go-live/).
+- This GitHub copy stays hidden from Google, so search engines only list prwgas.com.
