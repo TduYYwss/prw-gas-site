@@ -181,10 +181,77 @@
 <link rel="icon" href="img/logo.svg" type="image/svg+xml">
 <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800;900&family=Inter:wght@400;500;600&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/inter-latin-1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/archivo-latin-0.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+  /* Fonts served from this site (SIL Open Font License) */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(fonts/archivo-latin-0.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(fonts/archivo-latin-0.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(fonts/archivo-latin-0.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/inter-latin-1.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/inter-latin-1.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/inter-latin-1.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/montserrat-latin-2.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/montserrat-latin-2.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
   :root {
     /* Colours taken from the PRW logo */
     --navy: #1d4b7c;
@@ -401,6 +468,15 @@
 
   [id] { scroll-margin-top: 90px; }
   .work { background: var(--paper); }
+  .landlord { background: var(--card); border-top: 1px solid var(--line); }
+  .landlord .wrap { display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; align-items: center; }
+  .landlord p { color: #34404c; max-width: 36em; }
+  .cert-badge { margin: 0; justify-self: center; width: 100%; max-width: 330px; background: #fbfcfe; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; box-shadow: 0 24px 50px rgba(15,42,71,.16); transform: rotate(2.5deg); }
+  .cb-head { background: var(--navy-deep); color: #fff; font: 800 1.05rem Montserrat, sans-serif; padding: 18px 20px; border-bottom: 5px solid; border-image: linear-gradient(90deg, var(--red) 50%, var(--sky) 50%) 1; }
+  .cb-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; border-bottom: 1px solid var(--line); font-weight: 600; }
+  .cb-row b { width: 28px; height: 28px; border-radius: 6px; background: var(--wa); color: #fff; display: grid; place-items: center; }
+  .cb-foot { padding: 14px 20px; color: var(--muted); font-size: .85rem; }
+  @media (max-width: 860px) { .landlord .wrap { grid-template-columns: 1fr; gap: 34px; } .cert-badge { display: none; } }
   .again { padding: 0; }
   .again .wrap { background: linear-gradient(135deg, var(--navy-deep), var(--navy)); color: #cfdceb; border-radius: 16px; padding: 34px 36px; display: flex; gap: 28px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
   .again h2 { color: #fff; font-size: clamp(1.4rem, 3vw, 1.9rem); margin-bottom: .35em; }
@@ -536,6 +612,32 @@
     </div>
   </section>
 
+  <section class="landlord" id="landlords">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Landlords &amp; letting agents</span>
+        <h2>Gas safety certificates, sorted every year</h2>
+        <p>Landlords must have the gas appliances, fittings and flues in a rented home checked every 12 months by a Gas Safe registered engineer, and give tenants a copy of the record.</p>
+        <ul class="ticks">
+          <li>Gas safety records (often called CP12) for single lets and multiple properties</li>
+          <li>A reminder when each property's next check is due</li>
+          <li>Happy to arrange access directly with your tenants</li>
+          <li>Boiler servicing on the same visit if you need it</li>
+        </ul>
+        <a href="#" class="btn btn-wa js-wa" data-msg="Hi Paul, I'm a landlord / letting agent and I need a gas safety certificate. Number of properties: ">Ask about landlord certificates</a>
+      </div>
+      <figure class="cert-badge" aria-hidden="true">
+        <div class="cb-head">GAS SAFETY RECORD</div>
+        <div class="cb-row"><span>Boiler</span><b>✓</b></div>
+        <div class="cb-row"><span>Gas pipework</span><b>✓</b></div>
+        <div class="cb-row"><span>Flue</span><b>✓</b></div>
+        <div class="cb-row"><span>Ventilation</span><b>✓</b></div>
+        <div class="cb-row"><span>Safety devices</span><b>✓</b></div>
+        <div class="cb-foot">Gas Safe no. 961470</div>
+      </figure>
+    </div>
+  </section>
+
   <section class="work">
     <div class="wrap">
       <span class="eyebrow">Recent work</span>
@@ -659,6 +761,7 @@
             <small class="booking-only">Bookings are requests. I'll confirm the exact time with you on WhatsApp.</small>
           </div>
           <p class="tip">Tip: once WhatsApp opens, add a photo of your boiler and the label on it. It helps me bring the right parts.</p>
+          <p class="tip">Your details are only used to reply to you and do the job. See the <a href="privacy.html">privacy notice</a>.</p>
           <p id="formError" role="alert" style="color:var(--red);font-weight:600;margin:12px 0 0;display:none"></p>
         </form>
       </div>
@@ -691,7 +794,7 @@
 <footer>
   <div class="wrap">
     <div><strong>PRW Gas Services Ltd</strong><br>Bishopton, Renfrewshire · Gas Safe reg. <span data-cfg="gasSafe"></span><span id="legal"></span></div>
-    <div>Gas emergency: <a href="tel:08001119999">0800 111 999</a><br><a href="https://maps.app.goo.gl/4NusHSc2xvtGDy8K7" target="_blank" rel="noopener">Google Maps</a> · <a href="#" class="js-fb">Facebook</a><br>© <span id="yr"></span> PRW Gas Services Ltd</div>
+    <div>Gas emergency: <a href="tel:08001119999">0800 111 999</a><br><a href="https://maps.app.goo.gl/4NusHSc2xvtGDy8K7" target="_blank" rel="noopener">Google Maps</a> · <a href="#" class="js-fb">Facebook</a> · <a href="privacy.html">Privacy</a><br>© <span id="yr"></span> PRW Gas Services Ltd</div>
   </div>
 </footer>
 
@@ -752,7 +855,16 @@ if (CONFIG.registeredOffice) legal.push(`Registered office: ${CONFIG.registeredO
 if (CONFIG.vatNumber) legal.push(`VAT no. ${CONFIG.vatNumber}.`);
 document.getElementById("legal").textContent = legal.join(" ");
 
-const waLink = text => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(text)}`;
+// Where did this visitor come from? Links like prwgas.com/?from=google add a note to WhatsApp messages
+const SOURCES = { google: "Google", maps: "Google Maps", facebook: "Facebook", fb: "Facebook", instagram: "Instagram", flyer: "a flyer", van: "the van", video: "a video", qr: "a QR code" };
+let from = "";
+try {
+  const q = new URLSearchParams(location.search).get("from");
+  if (q) sessionStorage.setItem("prw-from", q.toLowerCase().slice(0, 20));
+  from = sessionStorage.getItem("prw-from") || "";
+} catch (e) {}
+const fromNote = from ? `\n(Found you via ${SOURCES[from] || from.replace(/[^a-z0-9 -]/g, "")})` : "";
+const waLink = text => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(text + fromNote)}`;
 document.querySelectorAll(".js-wa").forEach(a => { a.href = waLink(a.dataset.msg); a.target = "_blank"; a.rel = "noopener"; });
 document.querySelectorAll(".js-tel").forEach(a => a.href = "tel:+" + CONFIG.whatsapp);
 document.querySelectorAll(".js-mail").forEach(a => a.href = "mailto:" + CONFIG.email);

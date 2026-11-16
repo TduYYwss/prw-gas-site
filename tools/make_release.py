@@ -24,8 +24,12 @@ with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
     z.writestr("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n'
                '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                f'  <url><loc>https://prwgas.com/</loc><lastmod>{today}</lastmod></url>\n'
+               f'  <url><loc>https://prwgas.com/privacy.html</loc><lastmod>{today}</lastmod></url>\n'
                '</urlset>\n')
     z.write(ROOT / "404.html", "404.html")
+    z.write(ROOT / "privacy.html", "privacy.html")
+    for f in sorted((ROOT / "fonts").iterdir()):
+        z.write(f, f"fonts/{f.name}")
     for f in sorted((ROOT / "img").iterdir()):
         if f.is_file() and f.name != "logo.png":
             z.write(f, f"img/{f.name}")
