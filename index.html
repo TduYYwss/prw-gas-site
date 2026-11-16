@@ -245,7 +245,16 @@
   .btn svg { width: 20px; height: 20px; flex: none; }
 
   /* Hero */
-  .hero { background: linear-gradient(135deg, var(--navy-deep), var(--navy)); color: #fff; padding: 64px 0 88px; overflow: hidden; }
+  .hero { background: linear-gradient(135deg, var(--navy-deep), var(--navy)); color: #fff; padding: 64px 0 88px; overflow: hidden; position: relative; }
+  /* Lit-logo loop behind the van photo: black disappears with screen blending, so the burner ring glows around the photo */
+  .hero-flame { position: absolute; pointer-events: none; mix-blend-mode: screen; opacity: 1;
+    width: 235%; max-width: none; aspect-ratio: 1; height: auto; left: 50%; top: 52%; transform: translate(-50%, -50%);
+    -webkit-mask-image: radial-gradient(circle, #000 58%, transparent 72%); mask-image: radial-gradient(circle, #000 58%, transparent 72%); }
+  .hero-photo > img { position: relative; }
+  @media (max-width: 860px) {
+    .hero-photo { max-width: 290px !important; margin: 64px auto 56px; }
+    .hero-flame { width: 205%; }
+  }
   .hero .wrap { display: grid; grid-template-columns: 1.25fr 1fr; gap: 52px; align-items: center; }
   .hero h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); font-weight: 900; letter-spacing: -.02em; color: #fff; }
   .hero h1 em { font-style: normal; background: linear-gradient(90deg, #ff5a6a, #6cc0ff); -webkit-background-clip: text; background-clip: text; color: transparent; }
@@ -430,6 +439,7 @@
         </div>
       </div>
       <div class="hero-photo">
+      <video class="hero-flame" muted loop playsinline preload="none" poster="img/flame-loop.jpg" aria-hidden="true" tabindex="-1"></video>
         <img src="img/van.jpg" alt="PRW Gas Services van with the company logo and phone number" width="600" height="797">
         <div class="tag"><b>Call or WhatsApp</b><a href="#" class="js-tel" data-cfg="phoneDisplay" style="text-decoration:none;font-weight:600;font-size:1.05rem"></a></div>
       </div>
@@ -677,6 +687,15 @@ document.querySelectorAll("[data-cfg]").forEach(el => {
 });
 document.getElementById("areaList").innerHTML = CONFIG.areas.map(a => `<span>${a.replace(/</g, "&lt;")}</span>`).join("");
 document.getElementById("yr").textContent = new Date().getFullYear();
+// Start the flame loop only for visitors who haven't asked for less motion or data
+(() => {
+  const v = document.querySelector(".hero-flame"); if (!v) return;
+  const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const saveData = navigator.connection && navigator.connection.saveData;
+  if (calm || saveData) return;   // the still poster stays
+  v.src = "img/flame-loop.mp4";
+  v.load(); v.play().catch(() => {});
+})();
 const legal = [];
 if (CONFIG.companyNumber) legal.push(`Registered in ${CONFIG.registeredIn}, company no. ${CONFIG.companyNumber}.`);
 if (CONFIG.registeredOffice) legal.push(`Registered office: ${CONFIG.registeredOffice}.`);
