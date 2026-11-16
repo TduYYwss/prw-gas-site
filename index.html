@@ -167,8 +167,10 @@
     }
   ],
   "sameAs": [
-    "https://www.facebook.com/profile.php?id=61571802625465"
+    "https://www.facebook.com/profile.php?id=61571802625465",
+    "https://maps.app.goo.gl/4NusHSc2xvtGDy8K7"
   ],
+  "hasMap": "https://maps.app.goo.gl/4NusHSc2xvtGDy8K7",
   "potentialAction": {
     "@type": "CommunicateAction",
     "target": "https://wa.me/447947890992",
@@ -385,6 +387,13 @@
 
   [id] { scroll-margin-top: 90px; }
   .work { background: var(--paper); }
+  .again { padding: 0; }
+  .again .wrap { background: linear-gradient(135deg, var(--navy-deep), var(--navy)); color: #cfdceb; border-radius: 16px; padding: 34px 36px; display: flex; gap: 28px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+  .again h2 { color: #fff; font-size: clamp(1.4rem, 3vw, 1.9rem); margin-bottom: .35em; }
+  .again p { margin: 0; max-width: 36em; }
+  .again .eyebrow { color: #ff8a95; }
+  @media (max-width: 700px) { .again .wrap { margin: 0 16px; padding: 26px 22px; } .again .btn { width: 100%; } }
+  footer a { color: #cfdceb; }
   .lead-dark { color: var(--muted); max-width: 40em; margin: 0 0 24px; }
   .gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 360px)); gap: 16px; }
   .gallery figure { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
@@ -526,6 +535,20 @@
     </div>
   </section>
 
+  <section class="again">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Serviced with PRW before?</span>
+        <h2>Your next service is due 12 months after the last one</h2>
+        <p>Boiler manufacturers usually need a yearly service to keep the warranty valid. Message me and I'll book you in around the same time as last year.</p>
+      </div>
+      <a href="#" class="btn btn-wa js-wa" data-msg="Hi Paul, you've serviced my boiler before and I'd like to book my annual service.">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
+        Book my yearly service
+      </a>
+    </div>
+  </section>
+
   <section>
     <div class="wrap">
       <span class="eyebrow">How it works</span>
@@ -556,6 +579,8 @@
             <div><span>Email</span><a href="#" class="js-mail" data-cfg="email"></a></div></li>
           <li><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg></span>
             <div><span>Facebook</span><a href="#" class="js-fb">PRW Gas Services Ltd</a></div></li>
+          <li><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+            <div><span>Google</span><a href="https://maps.app.goo.gl/4NusHSc2xvtGDy8K7" target="_blank" rel="noopener">Find PRW on Google Maps</a></div></li>
         </ul>
       </div>
 
@@ -641,7 +666,7 @@
 <footer>
   <div class="wrap">
     <div><strong>PRW Gas Services Ltd</strong><br>Bishopton, Renfrewshire · Gas Safe reg. <span data-cfg="gasSafe"></span><span id="legal"></span></div>
-    <div>Gas emergency: <a href="tel:08001119999">0800 111 999</a><br>© <span id="yr"></span> PRW Gas Services Ltd</div>
+    <div>Gas emergency: <a href="tel:08001119999">0800 111 999</a><br><a href="https://maps.app.goo.gl/4NusHSc2xvtGDy8K7" target="_blank" rel="noopener">Google Maps</a> · <a href="#" class="js-fb">Facebook</a><br>© <span id="yr"></span> PRW Gas Services Ltd</div>
   </div>
 </footer>
 
